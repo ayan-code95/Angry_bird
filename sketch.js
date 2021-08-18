@@ -7,6 +7,7 @@ var engine, world;
 var box1, pig1;
 var backgroundImg,platform;
 var bird, slingShot;
+var gameState='onsling'
 
 function preload() {
     backgroundImg = loadImage("sprites/bg.png");
@@ -68,7 +69,9 @@ function draw(){
 }
 
 function mouseDragged(){
+    if (gameState !== "offsling"){
     Matter.Body.setPosition(bird.body, {x: mouseX , y: mouseY});
+    }
 }
 
 
