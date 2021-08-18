@@ -77,6 +77,7 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+    gameState='offsling'
 }
 function keyPressed(){
     if(keyCode===32)
